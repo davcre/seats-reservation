@@ -1,4 +1,4 @@
-module home/dav/seats_reservation
+module github.com/davcre/seats-reservation.git
 
 go 1.16
 

@@ -23,12 +23,11 @@ type Reservation struct {
   Date string `json:"date"`
   Email string `json:"email"`
   Phone string `json:"phone"`
-  Temp_reservation bool `json:"temp_reservation"`
 }
 
 func homePage(w http.ResponseWriter, r *http.Request) {
   fmt.Fprintf(w, "Welcome to Seat Reservation!")
-  fmt.Println("Endpoint Hit: HomePage")
+  fmt.Println("Endpoint Hit: Homepage")
 }
 
 func handleRequests() {
@@ -85,7 +84,7 @@ func getReservation(w http.ResponseWriter, r *http.Request) {
 func getAllReservations(w http.ResponseWriter, r *http.Request) {
   reservations := []Reservation{}
   db.Find(&reservations)
-  fmt.Println("Endpoint Hit: get all reservations")
+  fmt.Println("Endpoint Hit: Get all reservations")
   json.NewEncoder(w).Encode(reservations)
 }
 
